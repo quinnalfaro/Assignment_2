@@ -1,0 +1,21 @@
+Quinn Alfaro Runtime analysis Assignment 2:
+
+
+
+    Building the Graph:
+
+        O(m n^2) where m = number of movies and n = number of actors  in each film
+
+        This runtime factors in the fact that the program must first iterate through each of the films
+        and then perform a nxn iteration of each film as a double for loop where it adds each actor and
+        each of their connections (costars)
+
+    Searching the Graph:
+
+        O(e^d) where e is the number of edges and d is the depth you must go in the graph
+
+        A breadth first search is performed checking first all of an actors costars and then all of their costars
+        costars. There is an exponential time growth the deeper you go with each actor having to then be searched
+        with all of their costars. While the fastest possible runtime is constant time, a breadth first search seemed
+        more practical than a depth first search as a depth first search could you to go down huge depth of the graph
+        which ultimately could lead to no result.
